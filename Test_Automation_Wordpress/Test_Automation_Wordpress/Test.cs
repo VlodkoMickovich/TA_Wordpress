@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using Test_Automation_Wordpress.Pages;
 
 namespace Test_Automation_Wordpress
@@ -29,8 +30,8 @@ namespace Test_Automation_Wordpress
         public void Test1()
         {
             Updates u = new Updates();
-            u.click_button_checkNow();
-
+            //u.click_button_checkNow();
+            
 
         }
     }
