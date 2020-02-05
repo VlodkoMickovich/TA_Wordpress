@@ -14,6 +14,7 @@ namespace Test_Automation_Wordpress.Pages
         IWebElement link_do_backUp = driver.FindElement(By.XPath("//*[@id='wpbody-content']/div[3]/div/p/a[1]"));
         IWebElement link_updateWordpress = driver.FindElement(By.XPath("//*[@id='wpbody-content']/div[3]/div/p/a[2]"));
         IWebElement button_checkNow = driver.FindElement(By.XPath("//*[@id='wpbody-content']/div[3]/p[1]/a"));
+        IWebElement text_lastCheck = driver.FindElement(By.XPath("//*[@id='wpbody-content']/div[3]/p[1]"));
 
         //First block (New version of Wordpresss)
         IWebElement text_newVersion = driver.FindElement(By.XPath("//*[@id='wpbody-content']/div[3]/h2[1]"));
@@ -81,7 +82,10 @@ namespace Test_Automation_Wordpress.Pages
         {
             button_checkNow.Click();
         }
-
+        public string GetText_text_lastCheck()
+        {
+            return text_lastCheck.Text;
+        }
         //New version Wordpress(Body block)
         public string Get_text_newVersion()
         {
