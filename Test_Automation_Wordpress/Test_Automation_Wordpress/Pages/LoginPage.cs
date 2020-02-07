@@ -17,47 +17,51 @@ namespace Test_Automation_Wordpress.Pages
 
         //Atomic methods 
         #region
-        public void click_buttonLogo()
+        public void Click_buttonLogo()
         {
             button_logo.Click();
         }
-        public void click_login_input()
+        public void Click_login_input()
         {
             login_input.Click();
         }
-        public void clear_login_input()
+        public void Clear_login_input()
         {
             login_input.Clear();
         }
-        public void sendKeys_login_input(string str)
+        public void SendKeys_login_input(string str)
         {
             login_input.SendKeys(str);
         }
-        public void click_password_input()
+        public void Click_password_input()
         {
             password_input.Click();
         }
-        public void clear_password_input()
+        public void Clear_password_input()
         {
             password_input.Clear();
         }
-        public void sendKeys_password_input(string str)
+        public void SendKeys_password_input(string str)
         {
             password_input.SendKeys(str);
         }
-        public void click_radio_rememberMe()
+        public void Click_radio_rememberMe()
         {
             radio_rememberMe.Click();
         }
-        public void click_button_exit()
+        public bool IsVisible_radio_rememberMe()
+        {
+            return radio_rememberMe.Selected;
+        }
+        public void Click_button_exit()
         {
             button_exit.Click();
         }
-        public void click_link_lostPassword()
+        public void Click_link_lostPassword()
         {
             link_lostPassword.Click();
         }
-        public void click_link_backToSite()
+        public void Click_link_backToSite()
         {
             link_backToSite.Click();
         }

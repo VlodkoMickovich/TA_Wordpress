@@ -54,7 +54,6 @@ namespace Test_Automation_Wordpress.Pages
         IWebElement link_wordPressFooter = driver.FindElement(By.XPath("//*[@id='footer-thankyou']/a"));
         IWebElement link_downloadNewVersion = driver.FindElement(By.XPath("//*[@id='footer-upgrade']/strong/a"));
 
-
         //Athomic methods
 
         //Header_Methods
