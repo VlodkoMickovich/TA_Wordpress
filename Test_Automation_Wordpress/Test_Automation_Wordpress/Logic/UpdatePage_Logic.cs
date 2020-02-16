@@ -15,16 +15,18 @@ namespace Test_Automation_Wordpress.Logic
         {
             Updates u1 = new Updates();
             u1.Click_link_updateWordpress();
-            string actual_update = Updates.driver.Url; 
-            return actual_update; 
+            
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            return Updates.driver.Url;
         }
         public string ClickHeaderLinkBackUp()
         {
             Updates u = new Updates();
             u.Click_link_do_backUp();
-            string actual_backUp = Updates.driver.Url;
-      
-            return actual_backUp;
+           
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+
+            return Updates.driver.Url;
         }
         public string HeaderClickButtonCheckNow()
         {   

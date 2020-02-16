@@ -1,4 +1,5 @@
-﻿using Test_Automation_Wordpress.Pages;
+﻿using System;
+using Test_Automation_Wordpress.Pages;
 namespace Test_Automation_Wordpress.Logic
 {
     class LoginPage_Logic
@@ -15,6 +16,8 @@ namespace Test_Automation_Wordpress.Logic
             lp.SendKeys_password_input(password);
             lp.Click_button_exit();
 
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+
             return Updates.driver.Url;
         }
        
@@ -22,6 +25,7 @@ namespace Test_Automation_Wordpress.Logic
         {
             LoginPage lp = new LoginPage();
             lp.Click_buttonLogo();
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             return Updates.driver.Url;
         }
         public bool CheckRadioRememberMe()//Зробити через Assert()
@@ -43,12 +47,14 @@ namespace Test_Automation_Wordpress.Logic
         {
             LoginPage lp = new LoginPage();
             lp.Click_link_lostPassword();
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             return Updates.driver.Url;
         }
         public string Click_BackToSite()
         {
             LoginPage lp = new LoginPage();
             lp.Click_link_backToSite();
+            Updates.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             return Updates.driver.Url;
         }
     }
