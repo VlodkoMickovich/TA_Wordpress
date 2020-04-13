@@ -40,7 +40,7 @@ namespace Test_Automation_Wordpress.Pages
         //Anti-spam plugin 
         IWebElement plugin_name = driver.FindElement(By.XPath("//*[@id='update-plugins-table']/tbody/tr/td[2]/p/strong"));
         IWebElement link_showInformation = driver.FindElement(By.XPath("//*[@id='update-plugins-table']/tbody/tr/td[2]/p/a"));
-        //Обов'язково доробити елементи опису 
+        
 
         //Footer
 

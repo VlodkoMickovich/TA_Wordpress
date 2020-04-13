@@ -20,7 +20,7 @@ namespace Test_Automation_Wordpress
         [TearDown]
         public void Teardown()
         {
-            //Updates.driver.Close();
+            Updates.driver.Close();
         }
 
         [Test]
@@ -31,6 +31,7 @@ namespace Test_Automation_Wordpress
             string actual = u.ClickHeaderLinkBackUp();
 
             Assert.AreEqual(expected, actual);
+
         }
         [Test]
         public void TestHeaderLinkUpdate()
@@ -39,7 +40,8 @@ namespace Test_Automation_Wordpress
 
             string expected = "https://codex.wordpress.org/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_WordPress";
             string actual = u.HeaderClickLink_UpdateWordPress();
-            Assert.AreEqual(expected, actual); ;
+            Assert.AreEqual(expected, actual);
+
         }
 
         [Test]
@@ -50,6 +52,7 @@ namespace Test_Automation_Wordpress
             string time = "Последняя проверка: " + a.ToString("dd/MM/yyyy") + " в " + a.ToString("HH:mm") + "   Проверить снова";
             string actual = u.HeaderClickButtonCheckNow();
             Assert.AreEqual(time, actual);
+
         }
 
         [Test]
@@ -58,14 +61,18 @@ namespace Test_Automation_Wordpress
             UpdatePage_Logic u = new UpdatePage_Logic();
             int i = u.ClickRadioPlagins();
 
-            Assert.AreEqual(i,1);
+            Assert.AreEqual(i, 1);
+
         }
 
         [Test]
         public void TestFooterLinks()
         {
             UpdatePage_Logic u = new UpdatePage_Logic();
-            u.ClickingLinksFooter();
+            u.ClickingLinksFooter();s
         }
+
+
+
     }
 }
